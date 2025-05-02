@@ -1,0 +1,45 @@
+.btn,
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.2rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: background-color 0.2s, color 0.2s;
+    position: relative;
+    font-size: var(--font-main-size);
+    font-family: var(--font-main-family);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:focus,
+.btn:hover {
+    outline: none;
+    filter: brightness(0.95);
+}
+
+.btn:active {
+    filter: brightness(0.9);
+}
+
+.btn--white {
+    background-color: var(--color-white);
+    color: var(--color-primary-dark);
+}
+
+.btn--white:focus,
+.btn--white:hover {
+    color: var(--color-primary-dark);
+}
+
+.btn--primary {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+.btn--primary:focus,
+.btn--primary:hover {
+    background-color: var(--color-primary);
+}

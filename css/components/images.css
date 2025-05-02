@@ -1,0 +1,104 @@
+.section-primary__img-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.figure-img {
+    position: relative;
+    overflow: hidden;
+    border: 1rem solid white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-primary__img {
+    max-width: 65dvw;
+}
+
+.section-secondary__img {
+    min-width: fit-content;
+    height: auto;
+    margin: 0 auto;
+}
+
+.section-primary__img img {
+    display: block;
+    object-fit: cover;
+    max-width: 60dvw;
+    height: auto;
+}
+
+.section-secondary__img img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.section-primary__img figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--color-white);
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    font-family: var(--font-main-family);
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+.section-secondary__img figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--color-white);
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-family: var(--font-main-family);
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .section-primary__img {
+        max-width: 100dvw;
+    }
+
+    .section-primary__img img {
+        max-width: 90dvw;
+    }
+
+
+    .section-secondary__img {
+        height: fit-content;
+    }
+
+    .section-primary__img figcaption {
+        font-size: 2rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .section-secondary__img figcaption {
+        font-size: 2rem;
+        padding: 0.8rem 1rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .section-secondary__img {
+        max-width: 70dvw;
+    }
+
+    .section-secondary__img img {
+        max-width: 65dvw;
+    }
+}

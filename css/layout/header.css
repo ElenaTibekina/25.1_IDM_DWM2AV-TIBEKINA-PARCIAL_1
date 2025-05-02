@@ -1,0 +1,35 @@
+header {
+    background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-dark));
+    padding: 1.5rem 3rem;
+    background-position: top center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header__logo-box {
+    background: var(--color-white);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.header__logo-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.header__logo-img {
+    width: 9rem;
+    height: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: none;
+}

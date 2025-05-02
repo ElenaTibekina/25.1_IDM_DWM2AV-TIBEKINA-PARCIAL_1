@@ -1,0 +1,119 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--font-main-family);
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+strong, em {
+    font-weight: normal;
+    font-style: normal;
+}
+
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 6px;
+    width: 0;
+    background: linear-gradient(
+            to right,
+            var(--color-primary),
+            var(--color-primary-light),
+            var(--color-secondary-light)
+    );
+    border-radius: 10px;
+    box-shadow: 0 0 8px var(--color-primary-light);
+    transition: width 0.2s ease-out;
+    z-index: 9999;
+}
+
+section {
+    scroll-margin-top: 8rem;
+    padding: 2rem 3rem;
+}
+
+.section-primary {
+    background-image: linear-gradient(
+            135deg,
+            rgba(126, 213, 111, 0.6) 0%,
+            rgba(41, 152, 255, 0.8) 50%,
+            rgba(86, 67, 250, 0.6) 100%
+    );
+    color: var(--color-grey-light-1);
+}
+
+.section-secondary {
+    background-image: linear-gradient(
+            135deg,
+            rgba(255, 175, 189, 0.6) 0%,
+            rgba(255, 195, 113, 0.5) 50%,
+            rgba(255, 240, 165, 0.6) 100%
+    );
+    color: var(--color-primary-dark);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+@media (min-width: 1680px) {
+    html {
+        font-size: 75%; /* 1rem = 12px */
+    }
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 56.25%; /* 1rem = 9px */
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 50%; /* 1rem = 8px */
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 56.25%; /* 1rem = 9px */
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 1rem;
+    }
+}

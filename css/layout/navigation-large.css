@@ -1,0 +1,19 @@
+.navigation__container--desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation__list--desktop {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .navigation__list--desktop {
+        display: none;
+    }
+    .navigation__container--desktop {
+        max-width: fit-content;
+    }
+}
