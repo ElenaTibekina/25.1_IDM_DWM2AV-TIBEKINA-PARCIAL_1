@@ -14,8 +14,7 @@ function openModal(modalId) {
   if (modal) {
     modal.style.display = 'block';
     document.body.classList.add('no-scroll');
-
-    // Закрытие при клике вне окна
+    
     modal.onclick = function(event) {
       if (event.target === modal) {
         closeModal(modalId);
