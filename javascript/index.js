@@ -1,4 +1,5 @@
 'use strict';
+
 // Mobile Navigation
 document.querySelectorAll('.navigation__link').forEach(link => {
   link.addEventListener('click', () => {
@@ -10,40 +11,34 @@ document.querySelectorAll('.navigation__link').forEach(link => {
 // Modal
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
-  if (!modal) return;
+  if (modal) {
+    modal.style.display = 'block';
+    document.body.classList.add('no-scroll');
 
-  modal.style.display = 'block';
-  document.body.classList.add('no-scroll');
+    // Закрытие при клике вне окна
+    modal.onclick = function(event) {
+      if (event.target === modal) {
+        closeModal(modalId);
+      }
+    };
 
-  const escKeyListener = (event) => {
-    if (event.key === 'Escape') {
-      closeModal(modalId);
-      document.removeEventListener('keydown', escKeyListener);
+    document.addEventListener('keydown', escKeyListener);
+
+    function escKeyListener(event) {
+      if (event.key === 'Escape') {
+        closeModal(modalId);
+        document.removeEventListener('keydown', escKeyListener);
+      }
     }
-  };
-
-  const clickOutsideListener = (event) => {
-    if (event.target === modal) {
-      closeModal(modalId);
-    }
-  };
-
-  modal.addEventListener('click', clickOutsideListener);
-  document.addEventListener('keydown', escKeyListener);
-
-  modal._clickOutsideListener = clickOutsideListener;
+  }
 }
 
 function closeModal(modalId) {
   const modal = document.getElementById(modalId);
-  if (!modal) return;
-
-  modal.style.display = 'none';
-  document.body.classList.remove('no-scroll');
-
-  if (modal._clickOutsideListener) {
-    modal.removeEventListener('click', modal._clickOutsideListener);
-    delete modal._clickOutsideListener;
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.classList.remove('no-scroll');
+    modal.onclick = null;
   }
 }
 
