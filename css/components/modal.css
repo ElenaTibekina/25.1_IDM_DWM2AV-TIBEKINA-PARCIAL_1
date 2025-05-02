@@ -40,7 +40,9 @@
 }
 
 .close-button {
-    color: var(--color-black);
+    border: none;
+    background: none;
+    color: var(--color-grey-dark-3);
     font-size: 5rem;
     align-self: flex-end;
     position: sticky;
