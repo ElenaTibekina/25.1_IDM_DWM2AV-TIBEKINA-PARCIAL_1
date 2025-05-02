@@ -14,6 +14,7 @@
 
 .section-primary__img {
     max-width: 65dvw;
+    aspect-ratio: 16 / 9;
 }
 
 .section-secondary__img {
